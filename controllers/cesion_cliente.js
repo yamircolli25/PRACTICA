@@ -1,10 +1,10 @@
-let sesion_cliente=[ ];
+let cesion_cliente=[ ];
 
 function agregarcliente(nombre, email){
     sesion_cliente.push({nombre, email});
 }
 function obtenercliente(){
-    return sesion_cliente;
+    return cesion_cliente;
 }
 
 module.exports={
