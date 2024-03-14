@@ -235,10 +235,11 @@ p.empty-cart {
 }
 .btnReturnHome{
   background-color: #4CAF50;
-   color: white;
+  color: white;
     padding: 10px 20px;
     border: none;
     cursor: pointer;
-    border-radius: 5px
-    
+    border-radius: 5px;
+    text-align: center;
+   
 }
