@@ -1,5 +1,5 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family:Georgia, 'Times New Roman', Times, serif;
   margin: 0;
   padding: 0;
 }
@@ -7,7 +7,7 @@ body {
 nav {
   background-color: #16c66b;
   color: white;
-  padding: 10px 0;
+  padding: 15px 0;
   text-align: center;
 }
 nav ul {
@@ -47,12 +47,12 @@ table {
   margin-bottom: 20px;
 }
 table th, table td {
-  border: 1px solid #ddd;
+  border: 2px solid #141313;
   padding: 10px;
   text-align: center;
 }
 table tr:nth-child(even) {
-  background-color: #f2f2f2;
+  background-color: #d2f1d2;
 }
 table tr:hover {
   background-color: #ddd;
@@ -68,14 +68,14 @@ table tr:hover {
 .action-buttons button {
   padding: 5px 10px;
   margin-right: 5px;
-  background-color: #656262;
+  background-color: #10e36b;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
 .action-buttons button:hover {
-  background-color: #10e36b;
+  background-color: #444645;
 }
 .action-buttons span {
   margin: 0 5px;
@@ -85,6 +85,7 @@ table tr:hover {
 .procesar-compra-container {
   text-align: center;
   margin-bottom: 20px;
+  
 
   
 }
@@ -96,6 +97,7 @@ table tr:hover {
   color: white;
   border: none;
   cursor: pointer;
+  border-radius: 5px;
 }
 .procesar-compra-button:hover {
   background-color: #45a049;
@@ -123,7 +125,7 @@ p.empty-cart {
 .search-bar button {
   padding: 8px 15px;
   margin-left: 10px;
-  background-color: #333;
+  background-color: #4CAF50;
   color: white;
   border: none;
   border-radius: 5px;
@@ -175,7 +177,7 @@ p.empty-cart {
   cursor: pointer;
 }
 .producto button:hover {
-  background-color: #555;
+  background-color: #555555;
 }
 
 .button-container {
@@ -198,6 +200,7 @@ p.empty-cart {
 .button-confirm {
   background-color: #4CAF50;
   color: white;
+  border-radius: 5px;
 }
 
 .button-cancel {
@@ -206,8 +209,9 @@ p.empty-cart {
 }
 
 .button-return {
-  background-color: #008CBA;
+  background-color: #ca4d20;
   color: white;
+  border-radius: 5px;
 }
 
 .button-confirm:hover,
@@ -217,17 +221,26 @@ p.empty-cart {
 }
 
 .confirmation-title {
-  font-size: 2rem;
-  color: #333333;
+  font-size: 4rem;
+  color: hsl(0, 83%, 2%);
   text-align: center;
-  margin-top: 50px;
+  margin-top: 70px;
 }
 
 .confirmation-message {
-  font-size: 1.5rem;
-  color: #666;
+  font-size: 2 rem;
+  color: #ee3406;
   text-align: center;
   margin-top: 20px;
+}
+.btnReturnHome{
+  background-color: #4CAF50;
+   color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px
+    
 }
 
 /*# sourceMappingURL=styles.css.map */
