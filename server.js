@@ -3,6 +3,7 @@ const app = express();
 const session = require('express-session');
 const path = require('path');
 const productosController = require('./controllers/productos');
+const bodyParser = require('body-parser');
 
 // Configurar middleware para manejar sesiones
 app.use(session({
@@ -14,6 +15,11 @@ app.use(session({
 app.use((req, res, next) => {
   res.locals.carrito = req.session.carrito || [];
   next();
+});
+//middleware para las vistas
+app.use((req, res, next)=>{
+    res.locals.cliente=req.session.cliente||null;
+    next();
 });
 
 // Configuración de la plantilla Pug
@@ -129,11 +135,25 @@ app.post('/procesar-compra', (req, res) => {
     const carrito = req.session.carrito || []; // Obtiene el carrito de la sesión del usuario
 
     // Lógica para procesar la compra...
+    if(!req.session.cliente){
+        return res.status(403).send('Necesario registrarse');
+    }
 
     // Vaciar el carrito después de procesar la compra
     req.session.carrito = [];
     
     res.render('confirmacion-compra', { title: 'Compra Exitosa' });
+});
+app.get('/registro',(req, res)=>{
+    res.render('registro',{title:'Registro'});
+});
+//Parte del registro del cliente
+app.post('/registro',(req,res)=>{
+    const{nombre, email, mensaje} =req.body;
+    console.log(nombre,email,mensaje);
+    req.session.cliente={nombre, email};
+    res.redirect('/');
+    console.log('Usuario Registrado',nombre,email);
 });
   
 // Puerto en el que escucha el servidor
